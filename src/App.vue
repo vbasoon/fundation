@@ -1,21 +1,45 @@
-<script setup>
-// This starter template is using Vue 3 <script setup> SFCs
-// Check out https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup
-import HelloWorld from './components/HelloWorld.vue'
-</script>
-
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + Vite" />
+  <div class="post">
+    <div class="post__title"><strong>Name: </strong>JavaScript</div>
+    <hr />
+    <div class="post__body"><strong>Text: </strong>Programm language</div>
+  </div>
+  <div class="post">
+    <div class="post__title"><strong>Name: </strong>JavaScript</div>
+    <hr />
+    <div class="post__body"><strong>Text: </strong>Programm language</div>
+  </div>
+  <div class="post">
+    <div class="post__title"><strong>Name: </strong>JavaScript</div>
+    <hr />
+    <div class="post__body"><strong>Text: </strong>Programm language</div>
+  </div>
 </template>
 
+<script>
+export default {
+  data() {
+    posts: [
+      { id: 1, title: "JavaScript", body: "Description1" },
+      { id: 2, title: "React JS", body: "Description2" },
+      { id: 3, title: "Vue JS", body: "Description3" },
+    ];
+  },
+};
+</script>
+
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.post {
+  font-size: 20px;
+  margin-top: 50px;
+  margin-left: 200px;
+  width: 300px;
+  height: 200px;
+  border: 2px solid green;
 }
 </style>
