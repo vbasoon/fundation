@@ -2,12 +2,14 @@
   <form @submit.prevent>
     <input v-model="post.title" class="input" type="text" placeholder="Title" />
     <input v-model="post.text" class="input" type="text" placeholder="Text" />
-    <button @click="createPost">Add post</button>
+    <my-button @click="createPost">Add post</my-button>
   </form>
 </template>
 
 <script>
+import MyButton from "./UI/MyButton.vue";
 export default {
+  components: { MyButton },
   data() {
     return {
       post: {
@@ -48,19 +50,5 @@ input {
 
 input:hover {
   border: 2px solid teal;
-}
-
-button {
-  margin-top: 20px;
-  padding: 10px;
-  background: none;
-  border: 2px solid teal;
-  font-size: 14px;
-}
-
-button:hover {
-  background: teal;
-  color: #fff;
-  transition: color 0.5s ease-out;
 }
 </style>
