@@ -1,5 +1,5 @@
 <template>
-  <form>
+  <form @submit.prevent>
     <input v-model="title" class="input" type="text" placeholder="Title" />
     <input v-model="text" class="input" type="text" placeholder="Text" />
     <button @click="createPost">Add post</button>
@@ -24,8 +24,15 @@ export default {
       text: "",
     };
   },
-  methods() {
-    this.posts.push();
+  methods: {
+    createPost() {
+      const newPost = {
+        id: 1,
+        title: this.title,
+        body: this.text,
+      };
+      this.posts.push(newPost);
+    },
   },
 };
 </script>
