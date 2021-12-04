@@ -5,7 +5,11 @@
       <div><strong>Text:</strong>{{ post.text }}</div>
     </div>
     <div class="post__btns">
-      <my-button style="background: #db1919; color: #fff">Del</my-button>
+      <my-button
+        @click="$emit('remove', post)"
+        style="background: #db1919; color: #fff"
+        >Del</my-button
+      >
     </div>
   </div>
 </template>

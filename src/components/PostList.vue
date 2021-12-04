@@ -3,9 +3,10 @@
     <post-item
       class="post"
       v-for="post in posts"
-      :key="post.id"
       :post="post"
-    ></post-item>
+      :key="post.id"
+      @remove="$emit('remove', post)"
+    />
   </div>
 </template>
 

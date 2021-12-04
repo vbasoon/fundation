@@ -1,6 +1,6 @@
 <template>
   <post-form @create="createPost" />
-  <post-list :posts="posts" />
+  <post-list :posts="posts" @remove="removePost" />
 </template>
 
 <script>
@@ -25,6 +25,9 @@ export default {
   methods: {
     createPost(post) {
       this.posts = [post, ...this.posts];
+    },
+    removePost(post) {
+      this.posts = this.posts.filter((p) => p.id !== post.id);
     },
   },
 };
