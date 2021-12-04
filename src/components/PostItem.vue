@@ -5,7 +5,7 @@
       <div><strong>Text:</strong>{{ post.text }}</div>
     </div>
     <div class="post__btns">
-      <my-button>Del</my-button>
+      <my-button style="background: #db1919; color: #fff">Del</my-button>
     </div>
   </div>
 </template>
@@ -34,11 +34,5 @@ export default {
   width: 300px;
   height: 150px;
   border: 2px solid green;
-}
-
-my-button:hover {
-  background: teal;
-  color: #fff;
-  transition: color 0.5s ease-out;
 }
 </style>
