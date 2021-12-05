@@ -33,5 +33,6 @@ export default {
 form {
   max-width: 600px;
   margin-left: 50px;
+  margin-bottom: 10px;
 }
 </style>
